@@ -1,0 +1,13 @@
+<%= require_joosy_preloader_for 'blog', preloader: 'caching', force: false %>
+
+bootstrap = ->
+  $('#preloader').remove()
+  Joosy.Application.initialize 'blog','#application',
+    environment: window.joosy.environment
+    debug: false
+
+window.onload = ->
+  Preloader.load window.joosy.libraries,
+    complete: bootstrap
+    start: -> document.getElementById('preloader').style.display = 'block'
+    progress: (percent) -> document.getElementById('percents').innerHTML = percent + '%'

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>blog</title>
+
+    <script type="text/javascript">
+      window.joosy = {
+        libraries: <%= extract_sources_and_sizes_from_include_tag('blog') %>,
+        environment: '<%= Rails.env.to_s %>'
+      };
+    </script>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= javascript_include_tag 'blog_preloader' %>
+    <div id="application">
+      <div id="preloader">
+        Loading application...
+        <span id="percents">0%</span>
+      </div>
+    </div>
+  </body>
+</html>

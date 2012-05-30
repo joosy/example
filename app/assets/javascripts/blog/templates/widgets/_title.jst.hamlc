@@ -1,0 +1,5 @@
+%h1
+  %i.icon-book
+  = @piratish(@title)
+  %sup.badge.badge-success
+    24.05.2012

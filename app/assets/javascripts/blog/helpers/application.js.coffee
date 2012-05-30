@@ -1,0 +1,1 @@
+Joosy.helpers 'Application', ->

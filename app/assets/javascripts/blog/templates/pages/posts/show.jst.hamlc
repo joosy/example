@@ -1,0 +1,4 @@
+!= @widget 'div', => new TitleEditorWidget(@post)
+%hr
+%p
+  = @post('body')

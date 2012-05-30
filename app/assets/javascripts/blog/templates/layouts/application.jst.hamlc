@@ -1,0 +1,15 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      %ul.nav.pull-right
+        %li
+          %a{:style => 'display: none'}
+            24 May 2012, 19:24:00
+      %a.brand{:href => '#!/'}
+        Joosy Blog
+      %ul.nav
+        %li.divider-vertical
+        %li
+          %a{:href => '#!/posts/new'} Write something
+
+.container{:id => @yield()}

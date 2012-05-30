@@ -1,0 +1,8 @@
+- @posts.each (post) =>
+  .well
+    != @widget 'div', => new TitleEditorWidget(post)
+    %hr
+    %p
+      = post('body').truncate(20)
+      %a.btn.btn-info.btn-mini{:href => "#!/posts/#{post.id()}"}
+        Read it!
