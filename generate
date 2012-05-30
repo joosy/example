@@ -1,0 +1,18 @@
+#!/usr/bin/ruby
+
+`rm -rf docs`
+
+basename = 'app/assets/javascripts/blog/'
+current  = File.dirname(File.expand_path __FILE__)
+
+Dir.chdir(basename)
+
+files  = ['routes.js.coffee']
+dirs   = ['helpers', 'layouts', 'pages', 'resources', 'templates', 'widgets']
+files += dirs.map{|x| Dir[x + '/**/*']}.flatten.select{|x| !File.directory?(x)}
+
+system "../../../../docco/bin/docco #{files.join(' ')}"
+
+Dir.chdir(current)
+
+system "rm -rf ./docs; mv #{basename}/docs ./"

@@ -12,4 +12,5 @@
         %li
           %a{:href => '#!/posts/new'} Write something
 
+-# This element will include page content
 .container{:id => @yield()}

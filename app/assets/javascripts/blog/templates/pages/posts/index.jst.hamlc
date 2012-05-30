@@ -1,3 +1,4 @@
+-# Use Sugar.JS and Coffee! ZOMG so cute!
 - @posts.each (post) =>
   .well
     != @widget 'div', => new TitleEditorWidget(post)
