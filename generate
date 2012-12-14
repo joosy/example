@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+#!env ruby
 
 `rm -rf docs`
 
